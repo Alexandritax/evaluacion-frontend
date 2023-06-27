@@ -2,9 +2,17 @@
     <h1>Registro de juegos</h1>
     <div class="form">
         <form [formGroup]="registroForm">
-            <mat-form-field>
-                
+            <mat-form-field appearance="fill">
+                <mat-label>Plataforma</mat-label>
+                <mat-select>
+                    <mat-option value="0">Seleccionar</mat-option>
+                </mat-select>
             </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Titulo del juego</mat-label>
+                <input matInput formControlName="Titulo">
+            </mat-form-field>
+            <button mat-raised-button color="primary">Guardar</button>
         </form>
     </div>
 </div>

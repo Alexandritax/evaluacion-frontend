@@ -7,8 +7,6 @@ import { RegistroComponent } from './modules/registro/registro.component';
 import { ReporteComponent } from './modules/reporte/reporte.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
-import { ReactiveFormsModule } from '@angular/forms';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +18,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,7 +8,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class RegistroComponent {
   registroForm = new FormGroup({
-    Plataforma: new FormControl('Seleccionar'),
+    Plataforma: new FormControl(0),
     Titulo: new FormControl(''),
   })
 }
