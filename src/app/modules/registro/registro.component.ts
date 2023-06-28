@@ -19,10 +19,11 @@ export class RegistroComponent implements OnInit {
     Videojuego: ["", [Validators.required]],
   })
 
+  isZero = this.registroForm.value.Plataforma == 0;
   plataformas: any;
   
   Submit() { 
-    if(this.registroForm.value.Plataforma != 0)
+    if(!this.isZero)
     {
       const reporte = {
         plataforma_id: this.registroForm.value.Plataforma,

@@ -1,1 +1,16 @@
-<p>reporte works!</p>
+<mat-table [dataSource]="reportes">
+    <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef>Id</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.id}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="videojuego">
+        <mat-header-cell *matHeaderCellDef>Videojuego</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.videojuego}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="plataforma">
+        <mat-header-cell *matHeaderCellDef>Plataforma</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="Columns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: Columns;"></mat-row>
+</mat-table>

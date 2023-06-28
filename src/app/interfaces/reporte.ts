@@ -7,4 +7,5 @@ export interface Reportes {
     id: number;
     plataforma_id: number;
     videojuego: string;
+    name: string;
 }

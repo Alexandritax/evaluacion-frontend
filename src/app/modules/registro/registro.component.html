@@ -13,7 +13,7 @@
                 <mat-label>Titulo del juego</mat-label>
                 <input matInput formControlName="Videojuego">
             </mat-form-field>
-            <button mat-raised-button (click)="Submit()" color="primary">Guardar</button>
+            <button mat-raised-button [disabled]="registroForm.invalid || isZero" (click)="Submit()" color="primary">Guardar</button>
         </form>
     </div>
 </div>
