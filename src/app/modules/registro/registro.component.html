@@ -4,15 +4,16 @@
         <form [formGroup]="registroForm">
             <mat-form-field appearance="fill">
                 <mat-label>Plataforma</mat-label>
-                <mat-select>
+                <mat-select value="0" formControlName="Plataforma">
                     <mat-option value="0">Seleccionar</mat-option>
+                    <mat-option *ngFor = "let plataforma of plataformas" [value]="plataforma.id">{{plataforma.name}}</mat-option>
                 </mat-select>
             </mat-form-field>
             <mat-form-field appearance="fill">
                 <mat-label>Titulo del juego</mat-label>
-                <input matInput formControlName="Titulo">
+                <input matInput formControlName="Videojuego">
             </mat-form-field>
-            <button mat-raised-button color="primary">Guardar</button>
+            <button mat-raised-button (click)="Submit()" color="primary">Guardar</button>
         </form>
     </div>
 </div>
